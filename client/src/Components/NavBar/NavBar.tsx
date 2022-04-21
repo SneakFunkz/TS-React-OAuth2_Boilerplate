@@ -1,14 +1,16 @@
-import React from "react";
 import styles from "./NavBar.module.css";
-import { Link } from "react-router-dom";
 import axios, { AxiosResponse } from "axios";
 import { useContext } from "react";
 import { myContext } from "../../Context";
+import { useNavigate } from "react-router";
+import SignUpButton from "./SignUpButton/SignUpButton";
+import ProfileIcon from "./ProfileIcon/ProfileIcon";
 
 export default function NavBar() {
+  let navigate = useNavigate();
   const userObject = useContext<any>(myContext);
 
-  const handleLogout = () => [
+  const handleLogout = () => {
     axios
       .get("http://localhost:4000/auth/logout", {
         withCredentials: true,
@@ -18,22 +20,22 @@ export default function NavBar() {
           console.log(res);
           window.location.href = "/";
         }
-      }),
-  ];
+      });
+  };
 
   return (
     <div className={styles.navbar}>
       <ul className={styles.navBarWrapper}>
-        <li>
-          <Link to="/">Home</Link>
+        <li onClick={() => navigate(`/`)}>
+          <div className={styles.logo} style={{ letterSpacing: 5 }}>
+            RELUXOO
+          </div>
         </li>
-
+        <div className={styles.navMiddleGroup}>Explore </div>
         {!userObject ? (
-          <li>
-            <Link to="/login">Login</Link>
-          </li>
+          <SignUpButton></SignUpButton>
         ) : (
-          <li onClick={handleLogout}>Logout</li>
+          userObject && <ProfileIcon></ProfileIcon>
         )}
       </ul>
     </div>

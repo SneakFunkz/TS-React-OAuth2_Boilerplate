@@ -1,0 +1,13 @@
+.buttonContainer {
+  background-color: white;
+  padding: 12px 25px;
+  border-radius: 50px;
+  cursor: pointer;
+}
+.buttonText {
+  color: black;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 15px;
+  letter-spacing: 0.4em;
+}

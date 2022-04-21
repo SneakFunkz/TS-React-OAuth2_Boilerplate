@@ -1,26 +1,38 @@
 .navbar {
-  background-color: rgb(10, 10, 10);
 }
 
 .navBarWrapper {
-  /* background-color: black; */
-  width: 100vw;
-  padding: 0;
-  margin: none;
-  /* color: white; */
+  padding: 20px 80px;
   display: flex;
-  justify-content: space-around;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .navBarWrapper li {
   list-style: none;
   cursor: pointer;
   font-weight: 300;
-  margin: 10px;
 }
 
 .navbar a,
 .navbar li {
   color: rgb(234, 234, 234);
   text-decoration: none;
+}
+
+.logo {
+  font-weight: 300;
+  font-size: 1.5rem;
+  color: #ffffff;
+  display: inline-block;
+  letter-spacing: 0.5rem;
+}
+
+.navMiddleGroup {
+  position: absolute;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  text-align: center;
 }

@@ -79,11 +79,13 @@ passport.use(
           // Create one
           const newUser = new User({
             googleId: profile.id,
-            username: profile.name.givenName,
+            firstName: profile.name.givenName,
+            familyName: profile.name.familyName,
             email: profile.emails[0].value,
           });
           await User.create(newUser);
           cb(null, newUser);
+          return;
         }
         cb(null, doc);
       });
