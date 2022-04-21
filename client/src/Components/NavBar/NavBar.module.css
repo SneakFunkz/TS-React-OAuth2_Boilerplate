@@ -1,0 +1,26 @@
+.navbar {
+  background-color: rgb(10, 10, 10);
+}
+
+.navBarWrapper {
+  /* background-color: black; */
+  width: 100vw;
+  padding: 0;
+  margin: none;
+  /* color: white; */
+  display: flex;
+  justify-content: space-around;
+}
+
+.navBarWrapper li {
+  list-style: none;
+  cursor: pointer;
+  font-weight: 300;
+  margin: 10px;
+}
+
+.navbar a,
+.navbar li {
+  color: rgb(234, 234, 234);
+  text-decoration: none;
+}

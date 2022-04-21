@@ -1,0 +1,50 @@
+:root {
+  --login-button-width: 340px;
+}
+
+.loginContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.googleContainer {
+  display: flex;
+  flex-direction: row;
+  width: var(--login-button-width);
+  background-color: rgba(66, 133, 244);
+  margin: 0 auto;
+  cursor: pointer;
+  padding: 8px;
+  border-radius: 3px;
+  margin-top: 50px;
+  align-items: center;
+}
+
+.googleContainer:hover {
+  transition: 0.3s ease-in;
+  background-color: #4066cf;
+}
+
+.googleIconContainer {
+  width: 25px;
+  height: 25px;
+  background-color: white;
+  padding: 0;
+  border-radius: 3px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.googleButtonText {
+  color: white;
+  font-family: "Roboto";
+  font-weight: 500;
+  font-size: 1.05rem;
+  width: var(--login-button-width);
+  position: absolute;
+  text-align: center;
+}
