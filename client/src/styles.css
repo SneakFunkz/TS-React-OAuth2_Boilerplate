@@ -10,3 +10,10 @@ html {
 body {
   background-color: rgb(1, 1, 1);
 }
+
+:root {
+  --padding-side-breakpoint--1: 80px;
+  --padding-side-breakpoint--2: 40px;
+  --padding-side-breakpoint--3: 20px;
+  --padding-side-breakpoint--4: 10px;
+}

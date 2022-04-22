@@ -1,0 +1,28 @@
+.menuContainer {
+  background-color: rgb(239, 239, 239);
+  position: absolute;
+  right: var(--padding-side-breakpoint--1);
+  top: 65px;
+  border-radius: 10px;
+  width: 240px;
+  padding: 10px 0;
+  box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
+}
+
+@media (max-width: 1300px) {
+  .menuContainer {
+    right: var(--padding-side-breakpoint--2);
+  }
+}
+
+@media (max-width: 750px) {
+  .menuContainer {
+    right: var(--padding-side-breakpoint--3);
+  }
+}
+
+@media (max-width: 500px) {
+  .menuContainer {
+    right: var(--padding-side-breakpoint--4);
+  }
+}

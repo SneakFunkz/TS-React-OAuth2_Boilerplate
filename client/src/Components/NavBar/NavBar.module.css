@@ -2,7 +2,7 @@
 }
 
 .navBarWrapper {
-  padding: 20px 80px;
+  padding: 20px var(--padding-side-breakpoint--1);
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -35,4 +35,40 @@
   left: 0;
   right: 0;
   text-align: center;
+}
+
+/* POPDOWN MENU */
+
+.menuItem {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  cursor: pointer;
+  padding: 10px 20px;
+  background-color: rgb(239, 239, 239);
+  color: black;
+}
+
+.menuItem:hover {
+  transition: 0.3s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+
+  filter: brightness(1.1);
+}
+
+@media (max-width: 1300px) {
+  .navBarWrapper {
+    padding: 20px var(--padding-side-breakpoint--2);
+  }
+}
+
+@media (max-width: 750px) {
+  .navBarWrapper {
+    padding: 10px var(--padding-side-breakpoint--3);
+  }
+}
+
+@media (max-width: 500px) {
+  .navBarWrapper {
+    padding: 5px var(--padding-side-breakpoint--4);
+  }
 }

@@ -1,4 +1,3 @@
-import React from "react";
 import styles from "./TopSection.module.css";
 import HomePage from "../../../Assets/HomePage.png";
 

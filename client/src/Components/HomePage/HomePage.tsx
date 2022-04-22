@@ -9,8 +9,8 @@ export default function HomePage() {
 
   return (
     <div className={styles.homePageContainer}>
-      {/* {userObject && `Signed In!`}
-      <h1>Welcome to the Home Page {userObject && userObject.firstName}</h1> */}
+      {/*  {userObject && `Signed In!`} */}
+      {/* <h1>Welcome to the Home Page {userObject && userObject.firstName}</h1> */}
       <LandingSearchBar></LandingSearchBar>
       <TopSection></TopSection>
     </div>

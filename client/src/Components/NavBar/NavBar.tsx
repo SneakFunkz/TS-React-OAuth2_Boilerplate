@@ -1,10 +1,11 @@
 import styles from "./NavBar.module.css";
 import axios, { AxiosResponse } from "axios";
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { myContext } from "../../Context";
 import { useNavigate } from "react-router";
 import SignUpButton from "./SignUpButton/SignUpButton";
 import ProfileIcon from "./ProfileIcon/ProfileIcon";
+import IconPopDownMenu from "./IconPopDownMenu/IconPopDownMenu";
 
 export default function NavBar() {
   let navigate = useNavigate();
@@ -23,19 +24,58 @@ export default function NavBar() {
       });
   };
 
+  // Modal
+
+  const [modalOpen, setModalOpen] = useState(true);
+
+  const MenuItem = (props: any) => {
+    return (
+      <div onClick={props.onClick} className={styles.menuItem}>
+        {props.title}
+      </div>
+    );
+  };
+
   return (
     <div className={styles.navbar}>
       <ul className={styles.navBarWrapper}>
-        <li onClick={() => navigate(`/`)}>
-          <div className={styles.logo} style={{ letterSpacing: 5 }}>
+        <li>
+          <div
+            onClick={() => navigate(`/`)}
+            className={styles.logo}
+            style={{ letterSpacing: 5 }}
+          >
             RELUXOO
           </div>
         </li>
-        <div className={styles.navMiddleGroup}>Explore </div>
+        <div className={styles.navMiddleGroup}>
+          <ul>
+            <li>Explore</li>
+          </ul>{" "}
+        </div>
         {!userObject ? (
           <SignUpButton></SignUpButton>
         ) : (
-          userObject && <ProfileIcon></ProfileIcon>
+          userObject && (
+            <>
+              <div onClick={() => setModalOpen(!modalOpen)}>
+                <ProfileIcon></ProfileIcon>
+              </div>
+              {modalOpen && (
+                <IconPopDownMenu>
+                  <MenuItem
+                    onClick={() => navigate(`/guest/${userObject._id}`)}
+                    title={`Profile`}
+                  ></MenuItem>
+                  <MenuItem
+                    // onClick={handleLogout}
+                    title={`Notifications`}
+                  ></MenuItem>
+                  <MenuItem onClick={handleLogout} title={`Logout`}></MenuItem>
+                </IconPopDownMenu>
+              )}
+            </>
+          )
         )}
       </ul>
     </div>

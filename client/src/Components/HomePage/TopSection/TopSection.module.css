@@ -7,7 +7,7 @@
 
 .landingSection {
   width: 100%;
-  padding: 0px 80px;
+  padding: 0px var(--padding-side-breakpoint--1);
 }
 
 .landingTitle {
@@ -23,6 +23,24 @@
 }
 
 .landingImage {
-  border-radius: 40px;
+  border-radius: 20px;
   width: 100%;
+}
+
+@media (max-width: 1300px) {
+  .landingSection {
+    padding: 0px var(--padding-side-breakpoint--2);
+  }
+}
+
+@media (max-width: 750px) {
+  .landingSection {
+    padding: var(--padding-side-breakpoint--3);
+  }
+}
+
+@media (max-width: 500px) {
+  .landingSection {
+    padding: var(--padding-side-breakpoint--4);
+  }
 }
