@@ -1,4 +1,6 @@
 .navbar {
+  background-color: var(--background-black);
+  /* box-shadow: var(--box-shadow--1); */
 }
 
 .navBarWrapper {
@@ -24,9 +26,9 @@
 .logo {
   font-weight: 300;
   font-size: 1.5rem;
-  color: #ffffff;
+  color: black;
   display: inline-block;
-  letter-spacing: 0.5rem;
+  letter-spacing: 0.2rem;
 }
 
 .navMiddleGroup {
@@ -34,7 +36,15 @@
   margin: 0 auto;
   left: 0;
   right: 0;
+  width: 50px;
   text-align: center;
+}
+
+.navMiddleGroup li {
+  font-size: 0.66rem;
+  font-weight: 400;
+  cursor: pointer;
+  color: white;
 }
 
 /* POPDOWN MENU */
@@ -67,8 +77,14 @@
   }
 }
 
-@media (max-width: 500px) {
+@media (max-width: 520px) {
   .navBarWrapper {
     padding: 5px var(--padding-side-breakpoint--4);
   }
+}
+
+/* Black */
+
+.logo {
+  color: #ffffff;
 }

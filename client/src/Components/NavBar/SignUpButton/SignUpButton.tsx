@@ -6,7 +6,7 @@ export default function SignUpButton(props: any) {
   let navigate = useNavigate();
   return (
     <div className={styles.buttonContainer} onClick={() => navigate(`/login`)}>
-      <p className={styles.buttonText}>SIGN UP</p>
+      <p className={styles.buttonText}> SIGN UP</p>
     </div>
   );
 }

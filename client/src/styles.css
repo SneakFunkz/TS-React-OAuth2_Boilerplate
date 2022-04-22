@@ -9,11 +9,52 @@ html {
 
 body {
   background-color: rgb(1, 1, 1);
+  background-color: white;
 }
 
 :root {
+  /* BREAKPOINTS */
+
+  /* @media (max-width: 1300px) {
+    CLASSNAME {
+    }
+  }
+
+  // OPTIONAL
+
+  @media (max-width: 1000px) {
+    CLASSNAME {
+    }
+  }
+
+  @media (max-width: 750px) {
+    CLASSNAME {
+    }
+  }
+
+  @media (max-width: 520px) {
+    CLASSNAME {
+    }
+  } */
+
+  /* PADDING SIDE */
+
   --padding-side-breakpoint--1: 80px;
   --padding-side-breakpoint--2: 40px;
   --padding-side-breakpoint--3: 20px;
   --padding-side-breakpoint--4: 10px;
+
+  /* SECTION MARGIN */
+  --margin-bottom-section-breakpoint--1: 50px;
+  --margin-bottom-section-breakpoint--2: 30px;
+  --margin-bottom-section-breakpoint--3: 10px;
+  --margin-bottom-section-breakpoint--4: 10px;
+
+  /* COLORS */
+  --background-black: rgb(15, 15, 15);
+
+  /* BOX SHADOW */
+  --box-shadow--3: 0 10px 20px rgba(0, 0, 0, 0.19),
+    0 6px 6px rgba(0, 0, 0, 0.23);
+  --box-shadow--1: 0 10px 20px rgba(0, 0, 0, 0.08), 0 6px 6px rgba(0, 0, 0, 0.1);
 }

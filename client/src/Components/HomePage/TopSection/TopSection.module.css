@@ -7,14 +7,13 @@
 
 .landingSection {
   width: 100%;
-  padding: 0px var(--padding-side-breakpoint--1);
 }
 
 .landingTitle {
   position: absolute;
   text-align: center;
   font-weight: 800;
-  font-size: 38px;
+  font-size: 2.375rem;
   margin: 0 auto;
   left: 0;
   right: 0;
@@ -25,22 +24,37 @@
 .landingImage {
   border-radius: 20px;
   width: 100%;
+  box-shadow: var(--box-shadow--3);
 }
 
 @media (max-width: 1300px) {
   .landingSection {
-    padding: 0px var(--padding-side-breakpoint--2);
+  }
+}
+
+@media (max-width: 1000px) {
+  .landingTitle {
+    top: 45vw;
+    font-size: 1.8rem;
   }
 }
 
 @media (max-width: 750px) {
   .landingSection {
-    padding: var(--padding-side-breakpoint--3);
+  }
+
+  .landingTitle {
+    top: 50vw;
+    font-size: 1.3rem;
   }
 }
 
-@media (max-width: 500px) {
+@media (max-width: 520px) {
   .landingSection {
-    padding: var(--padding-side-breakpoint--4);
+  }
+
+  .landingTitle {
+    top: 55vw;
+    font-size: 1rem;
   }
 }

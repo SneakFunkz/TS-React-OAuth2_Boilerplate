@@ -9,11 +9,15 @@
   cursor: pointer;
 }
 
+.iconContainer:hover {
+  transition: 0.1s ease-in;
+  filter: brightness(0.7);
+}
+
 .initials {
   color: rgb(255, 255, 255);
   font-weight: 700;
   font-size: 1rem;
-  /* border-radius: 50px; */
 }
 
 .initalsHoop {

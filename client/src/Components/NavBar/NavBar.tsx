@@ -40,17 +40,16 @@ export default function NavBar() {
     <div className={styles.navbar}>
       <ul className={styles.navBarWrapper}>
         <li>
-          <div
-            onClick={() => navigate(`/`)}
-            className={styles.logo}
-            style={{ letterSpacing: 5 }}
-          >
+          <div onClick={() => navigate(`/`)} className={styles.logo}>
             RELUXOO
           </div>
         </li>
-        <div className={styles.navMiddleGroup}>
+        <div className={styles.navMiddleGroup} style={{ zIndex: 1 }}>
           <ul>
-            <li>Explore</li>
+            <li>
+              EXPLORE <br />
+              ALL
+            </li>
           </ul>{" "}
         </div>
         {!userObject ? (
