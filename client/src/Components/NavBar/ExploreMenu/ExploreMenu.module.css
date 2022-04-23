@@ -1,0 +1,36 @@
+.menuContainer {
+  border-bottom: 1.5px solid var(--background-black);
+}
+
+.menuContainer * {
+  color: black;
+}
+
+.navitgationTitle {
+  margin: 0 auto;
+  text-align: center;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 9px;
+  line-height: 2rem;
+}
+
+.navitgationTitle:hover {
+  font-weight: 900;
+}
+
+.tabContainer {
+  transition: 1s ease-in;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 400px;
+  margin: 0 auto;
+  margin-bottom: 10px;
+}
+
+.tabElement {
+  opacity: 0.3;
+  font-size: 0.8rem;
+  cursor: pointer;
+}

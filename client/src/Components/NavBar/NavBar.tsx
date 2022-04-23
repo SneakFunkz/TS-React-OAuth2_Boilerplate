@@ -6,6 +6,7 @@ import { useNavigate } from "react-router";
 import SignUpButton from "./SignUpButton/SignUpButton";
 import ProfileIcon from "./ProfileIcon/ProfileIcon";
 import IconPopDownMenu from "./IconPopDownMenu/IconPopDownMenu";
+import ExploreMenu from "./ExploreMenu/ExploreMenu";
 
 export default function NavBar() {
   let navigate = useNavigate();
@@ -26,7 +27,7 @@ export default function NavBar() {
 
   // Modal
 
-  const [modalOpen, setModalOpen] = useState(true);
+  const [modalOpen, setModalOpen] = useState(false);
 
   const MenuItem = (props: any) => {
     return (
@@ -37,46 +38,52 @@ export default function NavBar() {
   };
 
   return (
-    <div className={styles.navbar}>
-      <ul className={styles.navBarWrapper}>
-        <li>
-          <div onClick={() => navigate(`/`)} className={styles.logo}>
-            RELUXOO
-          </div>
-        </li>
-        <div className={styles.navMiddleGroup} style={{ zIndex: 1 }}>
-          <ul>
-            <li>
-              EXPLORE <br />
-              ALL
-            </li>
-          </ul>{" "}
-        </div>
-        {!userObject ? (
-          <SignUpButton></SignUpButton>
-        ) : (
-          userObject && (
-            <>
-              <div onClick={() => setModalOpen(!modalOpen)}>
-                <ProfileIcon></ProfileIcon>
-              </div>
-              {modalOpen && (
-                <IconPopDownMenu>
-                  <MenuItem
-                    onClick={() => navigate(`/guest/${userObject._id}`)}
-                    title={`Profile`}
-                  ></MenuItem>
-                  <MenuItem
-                    // onClick={handleLogout}
-                    title={`Notifications`}
-                  ></MenuItem>
-                  <MenuItem onClick={handleLogout} title={`Logout`}></MenuItem>
-                </IconPopDownMenu>
-              )}
-            </>
-          )
-        )}
-      </ul>
-    </div>
+    <>
+      <div className={styles.navbar}>
+        <ul className={styles.navBarWrapper}>
+          <li>
+            <div onClick={() => navigate(`/`)} className={styles.logo}>
+              RELUXOO
+            </div>
+          </li>
+          {/* <div className={styles.navMiddleGroup} style={{ zIndex: 1 }}>
+            <ul>
+              <li>
+                EXPLORE <br />
+                ALL
+              </li>
+            </ul>{" "}
+          </div> */}
+          {!userObject ? (
+            <SignUpButton></SignUpButton>
+          ) : (
+            userObject && (
+              <>
+                <div onClick={() => setModalOpen(!modalOpen)}>
+                  <ProfileIcon></ProfileIcon>
+                </div>
+                {modalOpen && (
+                  <IconPopDownMenu>
+                    <MenuItem
+                      onClick={() => navigate(`/guest/${userObject._id}`)}
+                      title={`Profile`}
+                    ></MenuItem>
+                    <MenuItem
+                      // onClick={handleLogout}
+                      title={`Notifications`}
+                    ></MenuItem>
+                    <MenuItem
+                      onClick={handleLogout}
+                      title={`Logout`}
+                    ></MenuItem>
+                  </IconPopDownMenu>
+                )}
+              </>
+            )
+          )}
+        </ul>
+      </div>
+      <ExploreMenu></ExploreMenu>
+    </>
   );
 }

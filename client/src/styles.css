@@ -8,8 +8,9 @@ html {
 }
 
 body {
+  scroll-behavior: smooth;
   background-color: rgb(1, 1, 1);
-  background-color: white;
+  background-color: rgb(251, 251, 251);
 }
 
 :root {
@@ -52,9 +53,30 @@ body {
 
   /* COLORS */
   --background-black: rgb(15, 15, 15);
+  --background-white: rgb(251, 251, 251);
 
   /* BOX SHADOW */
   --box-shadow--3: 0 10px 20px rgba(0, 0, 0, 0.19),
     0 6px 6px rgba(0, 0, 0, 0.23);
   --box-shadow--1: 0 10px 20px rgba(0, 0, 0, 0.08), 0 6px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* BUTTONS */
+.primaryButton {
+  background-color: black;
+  padding: 13px 25px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+}
+
+/* HELPER */
+.right {
+  text-align: right;
+  margin-left: auto;
+}
+
+.bottom {
+  bottom: 0;
+  margin-top: auto;
 }
